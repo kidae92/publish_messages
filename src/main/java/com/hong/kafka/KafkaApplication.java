@@ -1,5 +1,6 @@
 package com.hong.kafka;
 
+import com.hong.kafka.producer.ClipProducer;
 import org.apache.kafka.clients.admin.Admin;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.TopicDescription;
@@ -21,19 +22,12 @@ public class KafkaApplication {
         SpringApplication.run(KafkaApplication.class, args);
     }
     @Bean
-    public ApplicationRunner runner(AdminClient adminClient){
+    public ApplicationRunner runner(ClipProducer clipProducer){
         return args -> {
-            Map<String, TopicListing> topics = adminClient.listTopics().namesToListings().get();
-            for (String topicName : topics.keySet()) {
-                TopicListing topicListing = topics.get(topicName);
-                System.out.println(topicListing);
+            clipProducer.async("testhong", "hello-async");
+            clipProducer.sync("testhong", "hello-sync");
 
-                KafkaFuture<Map<String, TopicDescription>> description = adminClient.describeTopics(Collections.singleton(topicName)).all();
-                System.out.println(description);
-
-            }
-
-
+            Thread.sleep(1000L);
         };
     }
 
