@@ -4,6 +4,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.kafka.core.KafkaProducerException;
 import org.springframework.kafka.core.KafkaSendCallback;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.RoutingKafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
@@ -16,9 +17,11 @@ import java.util.concurrent.TimeoutException;
 public class ClipProducer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
+    private final RoutingKafkaTemplate routingKafkaTemplate;
 
-    public ClipProducer(KafkaTemplate<String, String> kafkaTemplate) {
+    public ClipProducer(KafkaTemplate<String, String> kafkaTemplate, RoutingKafkaTemplate routingKafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
+        this.routingKafkaTemplate = routingKafkaTemplate;
     }
 
     public void async(String topic, String message){
@@ -49,5 +52,10 @@ public class ClipProducer {
         } catch (TimeoutException e) {
             e.printStackTrace();
         }
+    }
+
+    public void routingSend(String topic, String message){
+        routingKafkaTemplate.send(topic, message);
+
     }
 }
