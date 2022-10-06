@@ -17,7 +17,10 @@ public class KafkaTopicConfiguration {
     @Bean
     public KafkaAdmin.NewTopics nodamTopic() {
         return new KafkaAdmin.NewTopics(
-                TopicBuilder.name("testhong").build()
+                TopicBuilder.name("testhong").build(),
+                TopicBuilder.name("byte-test").build(),
+                TopicBuilder.name("request-topic").build(),
+                TopicBuilder.name("replies-topic").build()
         );
     }
 }

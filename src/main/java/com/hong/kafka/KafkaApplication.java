@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.core.KafkaTemplate;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
@@ -26,7 +27,9 @@ public class KafkaApplication {
         return args -> {
             clipProducer.async("testhong", "hello-async");
             clipProducer.sync("testhong", "hello-sync");
-
+            clipProducer.routingSend("testhong", "rout rout");
+            clipProducer.routingSendBytes("byte-test", "byte-test".getBytes(StandardCharsets.UTF_8));
+            clipProducer.replyingSend("request-topic", "Ping request");
             Thread.sleep(1000L);
         };
     }

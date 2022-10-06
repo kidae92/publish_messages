@@ -6,7 +6,7 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="1111" />
+          <option name="caretOffset" value="1336" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/KafkaApplication.java" />
         </OpenedFileInfo>
         <OpenedFileInfo>
@@ -14,15 +14,11 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/configuration/KafkaTemplateConfiguration.java" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="434" />
+          <option name="caretOffset" value="818" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/configuration/KafkaTopicConfiguration.java" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="174" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/producer/test.java" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="2258" />
+          <option name="caretOffset" value="2817" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/producer/ClipProducer.java" />
         </OpenedFileInfo>
         <OpenedFileInfo>
@@ -30,8 +26,20 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/configuration/RoutingKafkaTemplateConfiguration.java" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="1220" />
+          <option name="caretOffset" value="763" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/configuration/RoutingKafkaTemplateConfiguration.java" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/README.md" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="565" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/configuration/ReplyingKafkaTemplateConfiguration.java" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="732" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/main/java/com/hong/kafka/consumer/ClipConsumer.java" />
         </OpenedFileInfo>
       </list>
     </option>
